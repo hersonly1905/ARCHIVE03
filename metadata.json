@@ -1,0 +1,6 @@
+{
+  "name": "Three Months Anniversary Timeline",
+  "description": "An interactive, cinematic, and emotional 3-month memory journey celebrating deep love, milestones, and romantic timelines.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

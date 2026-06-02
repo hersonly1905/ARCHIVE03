@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,300;0,500;1,300&family=Space+Grotesk:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Inter', 'Space Grotesk', ui-sans-serif, system-ui, sans-serif;
+  --font-serif: 'Playfair Display', Georgia, Cambria, serif;
+  --font-cursive: 'Cormorant Garamond', Georgia, serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  
+  --color-obsidian: #050304;
+  --color-luxury-rose: #ff3d60;
+  --color-luxury-gold: #c5a059;
+}
+
+/* Base custom interactive styling */
+html, body {
+  background-color: #050304; /* Obsidian black base */
+  color: #ffffff;
+  overflow-x: hidden;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Sophisticated Dark Theme Classes */
+.atmosphere {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 70% 30%, rgba(255, 61, 96, 0.1) 0%, transparent 50%), radial-gradient(circle at 20% 80%, rgba(197, 160, 89, 0.05) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.cinematic-vignette {
+  position: absolute;
+  inset: 0;
+  box-shadow: inset 0 0 150px rgba(0, 0, 0, 1);
+  pointer-events: none;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glow-pulse {
+  filter: drop-shadow(0 0 10px rgba(255, 61, 96, 0.4));
+}
+
+.timeline-line-gold {
+  width: 1px;
+  background: linear-gradient(to bottom, transparent, rgba(197, 160, 89, 0.5), transparent);
+}
+
+/* Custom Hide Scrollbar Utility */
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+/* Custom slow rotation animations */
+.animate-spin-slow {
+  animation: spin 20s linear infinite;
+}
+
+/* Floating custom rose petal / heart element keyframes */
+@keyframes slideUpFlow {
+  0% {
+    transform: translateY(110vh) rotate(0deg);
+    opacity: 0;
+  }
+  15% {
+    opacity: 0.45;
+  }
+  85% {
+    opacity: 0.45;
+  }
+  100% {
+    transform: translateY(-10vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+.animate-slide-up {
+  animation-name: slideUpFlow;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
